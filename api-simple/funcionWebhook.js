@@ -1,9 +1,7 @@
 const axios = require("axios");
-
 const medicoWebhook = axios.create({
   baseURL: "http://localhost:3000",
 });
-
 module.exports.enviarMensaje = async (mensaje, data) => {
   const token = await medicoWebhook
     .get("/webhook", {

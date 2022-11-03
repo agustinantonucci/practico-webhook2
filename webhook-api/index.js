@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config();
 const authenticationToken = "777";
 
 const express = require("express");
@@ -45,8 +46,8 @@ app.post("/webhook", function (req, res) {
       port: 465,
       secure: true,
       auth: {
-        user: "agustinantonucci@gmail.com",
-        pass: "iryjedpzkkkyczbo",
+        user: process.env.user,
+        pass: process.env.pass,
       },
     });
 

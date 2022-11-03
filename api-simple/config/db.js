@@ -1,7 +1,9 @@
+const dotenv = require('dotenv').config();
+
 module.exports = {
   HOST: "localhost",
   USER: "root",
-  PASSWORD: "PatriCia89",
+  PASSWORD: process.env.PASSWORD,
   DB: "medicos",
   PORT: 3306,
 };
